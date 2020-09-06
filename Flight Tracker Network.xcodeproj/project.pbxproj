@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC9A3BD2250598E20019C07F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A3BD1250598E20019C07F /* AppDelegate.swift */; };
+		CC9A3BD4250598E20019C07F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A3BD3250598E20019C07F /* SceneDelegate.swift */; };
+		CC9A3BD6250598E20019C07F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A3BD5250598E20019C07F /* ViewController.swift */; };
+		CC9A3BD9250598E20019C07F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A3BD7250598E20019C07F /* Main.storyboard */; };
+		CC9A3BDB250598E80019C07F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9A3BDA250598E80019C07F /* Assets.xcassets */; };
+		CC9A3BDE250598E80019C07F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A3BDC250598E80019C07F /* LaunchScreen.storyboard */; };
+		CC9A3BE9250598E80019C07F /* Flight_Tracker_NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A3BE8250598E80019C07F /* Flight_Tracker_NetworkTests.swift */; };
+		CC9A3BF4250598E80019C07F /* Flight_Tracker_NetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A3BF3250598E80019C07F /* Flight_Tracker_NetworkUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC9A3BE5250598E80019C07F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9A3BC6250598E10019C07F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9A3BCD250598E20019C07F;
+			remoteInfo = "Flight Tracker Network";
+		};
+		CC9A3BF0250598E80019C07F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9A3BC6250598E10019C07F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9A3BCD250598E20019C07F;
+			remoteInfo = "Flight Tracker Network";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC9A3BCE250598E20019C07F /* Flight Tracker Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flight Tracker Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9A3BD1250598E20019C07F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC9A3BD3250598E20019C07F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CC9A3BD5250598E20019C07F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC9A3BD8250598E20019C07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC9A3BDA250598E80019C07F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC9A3BDD250598E80019C07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC9A3BDF250598E80019C07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9A3BE4250598E80019C07F /* Flight Tracker NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flight Tracker NetworkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9A3BE8250598E80019C07F /* Flight_Tracker_NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight_Tracker_NetworkTests.swift; sourceTree = "<group>"; };
+		CC9A3BEA250598E80019C07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9A3BEF250598E80019C07F /* Flight Tracker NetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flight Tracker NetworkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9A3BF3250598E80019C07F /* Flight_Tracker_NetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight_Tracker_NetworkUITests.swift; sourceTree = "<group>"; };
+		CC9A3BF5250598E80019C07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC9A3BCB250598E20019C07F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9A3BE1250598E80019C07F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9A3BEC250598E80019C07F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC9A3BC5250598E10019C07F = {
+			isa = PBXGroup;
+			children = (
+				CC9A3BD0250598E20019C07F /* Flight Tracker Network */,
+				CC9A3BE7250598E80019C07F /* Flight Tracker NetworkTests */,
+				CC9A3BF2250598E80019C07F /* Flight Tracker NetworkUITests */,
+				CC9A3BCF250598E20019C07F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC9A3BCF250598E20019C07F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A3BCE250598E20019C07F /* Flight Tracker Network.app */,
+				CC9A3BE4250598E80019C07F /* Flight Tracker NetworkTests.xctest */,
+				CC9A3BEF250598E80019C07F /* Flight Tracker NetworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC9A3BD0250598E20019C07F /* Flight Tracker Network */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A3BD1250598E20019C07F /* AppDelegate.swift */,
+				CC9A3BD3250598E20019C07F /* SceneDelegate.swift */,
+				CC9A3BD5250598E20019C07F /* ViewController.swift */,
+				CC9A3BD7250598E20019C07F /* Main.storyboard */,
+				CC9A3BDA250598E80019C07F /* Assets.xcassets */,
+				CC9A3BDC250598E80019C07F /* LaunchScreen.storyboard */,
+				CC9A3BDF250598E80019C07F /* Info.plist */,
+			);
+			path = "Flight Tracker Network";
+			sourceTree = "<group>";
+		};
+		CC9A3BE7250598E80019C07F /* Flight Tracker NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A3BE8250598E80019C07F /* Flight_Tracker_NetworkTests.swift */,
+				CC9A3BEA250598E80019C07F /* Info.plist */,
+			);
+			path = "Flight Tracker NetworkTests";
+			sourceTree = "<group>";
+		};
+		CC9A3BF2250598E80019C07F /* Flight Tracker NetworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A3BF3250598E80019C07F /* Flight_Tracker_NetworkUITests.swift */,
+				CC9A3BF5250598E80019C07F /* Info.plist */,
+			);
+			path = "Flight Tracker NetworkUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC9A3BCD250598E20019C07F /* Flight Tracker Network */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9A3BF8250598E80019C07F /* Build configuration list for PBXNativeTarget "Flight Tracker Network" */;
+			buildPhases = (
+				CC9A3BCA250598E20019C07F /* Sources */,
+				CC9A3BCB250598E20019C07F /* Frameworks */,
+				CC9A3BCC250598E20019C07F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flight Tracker Network";
+			productName = "Flight Tracker Network";
+			productReference = CC9A3BCE250598E20019C07F /* Flight Tracker Network.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC9A3BE3250598E80019C07F /* Flight Tracker NetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9A3BFB250598E80019C07F /* Build configuration list for PBXNativeTarget "Flight Tracker NetworkTests" */;
+			buildPhases = (
+				CC9A3BE0250598E80019C07F /* Sources */,
+				CC9A3BE1250598E80019C07F /* Frameworks */,
+				CC9A3BE2250598E80019C07F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9A3BE6250598E80019C07F /* PBXTargetDependency */,
+			);
+			name = "Flight Tracker NetworkTests";
+			productName = "Flight Tracker NetworkTests";
+			productReference = CC9A3BE4250598E80019C07F /* Flight Tracker NetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC9A3BEE250598E80019C07F /* Flight Tracker NetworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9A3BFE250598E80019C07F /* Build configuration list for PBXNativeTarget "Flight Tracker NetworkUITests" */;
+			buildPhases = (
+				CC9A3BEB250598E80019C07F /* Sources */,
+				CC9A3BEC250598E80019C07F /* Frameworks */,
+				CC9A3BED250598E80019C07F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9A3BF1250598E80019C07F /* PBXTargetDependency */,
+			);
+			name = "Flight Tracker NetworkUITests";
+			productName = "Flight Tracker NetworkUITests";
+			productReference = CC9A3BEF250598E80019C07F /* Flight Tracker NetworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC9A3BC6250598E10019C07F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Mbusi Hlatshwayo";
+				TargetAttributes = {
+					CC9A3BCD250598E20019C07F = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					CC9A3BE3250598E80019C07F = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = CC9A3BCD250598E20019C07F;
+					};
+					CC9A3BEE250598E80019C07F = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = CC9A3BCD250598E20019C07F;
+					};
+				};
+			};
+			buildConfigurationList = CC9A3BC9250598E10019C07F /* Build configuration list for PBXProject "Flight Tracker Network" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC9A3BC5250598E10019C07F;
+			productRefGroup = CC9A3BCF250598E20019C07F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC9A3BCD250598E20019C07F /* Flight Tracker Network */,
+				CC9A3BE3250598E80019C07F /* Flight Tracker NetworkTests */,
+				CC9A3BEE250598E80019C07F /* Flight Tracker NetworkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC9A3BCC250598E20019C07F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9A3BDE250598E80019C07F /* LaunchScreen.storyboard in Resources */,
+				CC9A3BDB250598E80019C07F /* Assets.xcassets in Resources */,
+				CC9A3BD9250598E20019C07F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9A3BE2250598E80019C07F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9A3BED250598E80019C07F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC9A3BCA250598E20019C07F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9A3BD6250598E20019C07F /* ViewController.swift in Sources */,
+				CC9A3BD2250598E20019C07F /* AppDelegate.swift in Sources */,
+				CC9A3BD4250598E20019C07F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9A3BE0250598E80019C07F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9A3BE9250598E80019C07F /* Flight_Tracker_NetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9A3BEB250598E80019C07F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9A3BF4250598E80019C07F /* Flight_Tracker_NetworkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC9A3BE6250598E80019C07F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9A3BCD250598E20019C07F /* Flight Tracker Network */;
+			targetProxy = CC9A3BE5250598E80019C07F /* PBXContainerItemProxy */;
+		};
+		CC9A3BF1250598E80019C07F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9A3BCD250598E20019C07F /* Flight Tracker Network */;
+			targetProxy = CC9A3BF0250598E80019C07F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC9A3BD7250598E20019C07F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9A3BD8250598E20019C07F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC9A3BDC250598E80019C07F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9A3BDD250598E80019C07F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC9A3BF6250598E80019C07F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC9A3BF7250598E80019C07F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC9A3BF9250598E80019C07F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flight Tracker Network/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-Network";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC9A3BFA250598E80019C07F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flight Tracker Network/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-Network";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC9A3BFC250598E80019C07F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flight Tracker NetworkTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-NetworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flight Tracker Network.app/Flight Tracker Network";
+			};
+			name = Debug;
+		};
+		CC9A3BFD250598E80019C07F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flight Tracker NetworkTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-NetworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flight Tracker Network.app/Flight Tracker Network";
+			};
+			name = Release;
+		};
+		CC9A3BFF250598E80019C07F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flight Tracker NetworkUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-NetworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flight Tracker Network";
+			};
+			name = Debug;
+		};
+		CC9A3C00250598E80019C07F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flight Tracker NetworkUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-NetworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flight Tracker Network";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC9A3BC9250598E10019C07F /* Build configuration list for PBXProject "Flight Tracker Network" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9A3BF6250598E80019C07F /* Debug */,
+				CC9A3BF7250598E80019C07F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9A3BF8250598E80019C07F /* Build configuration list for PBXNativeTarget "Flight Tracker Network" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9A3BF9250598E80019C07F /* Debug */,
+				CC9A3BFA250598E80019C07F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9A3BFB250598E80019C07F /* Build configuration list for PBXNativeTarget "Flight Tracker NetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9A3BFC250598E80019C07F /* Debug */,
+				CC9A3BFD250598E80019C07F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9A3BFE250598E80019C07F /* Build configuration list for PBXNativeTarget "Flight Tracker NetworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9A3BFF250598E80019C07F /* Debug */,
+				CC9A3C00250598E80019C07F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC9A3BC6250598E10019C07F /* Project object */;
+}
