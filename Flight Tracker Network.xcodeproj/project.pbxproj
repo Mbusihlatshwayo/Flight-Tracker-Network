@@ -27,6 +27,12 @@
 		CC9A3C1E2505F8090019C07F /* FlightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9A3C1C2505F8090019C07F /* FlightsViewController.xib */; };
 		CC9A3C252506000F0019C07F /* CommunityPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9A3C202505F85C0019C07F /* CommunityPostTableViewCell.xib */; };
 		CC9A3C27250600440019C07F /* CommunityPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A3C26250600440019C07F /* CommunityPostTableViewCell.swift */; };
+		CCCD55A92509617A004B20D0 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55A82509617A004B20D0 /* Flight.swift */; };
+		CCCD55AB250961F0004B20D0 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55AA250961F0004B20D0 /* Departure.swift */; };
+		CCCD55AD250963A7004B20D0 /* Arrival.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55AC250963A7004B20D0 /* Arrival.swift */; };
+		CCCD55AF25096424004B20D0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55AE25096424004B20D0 /* File.swift */; };
+		CCCD55B12509676F004B20D0 /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55B02509676F004B20D0 /* Aircraft.swift */; };
+		CCCD55B325096D11004B20D0 /* LiveLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55B225096D11004B20D0 /* LiveLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,12 @@
 		CC9A3C1C2505F8090019C07F /* FlightsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightsViewController.xib; sourceTree = "<group>"; };
 		CC9A3C202505F85C0019C07F /* CommunityPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityPostTableViewCell.xib; sourceTree = "<group>"; };
 		CC9A3C26250600440019C07F /* CommunityPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostTableViewCell.swift; sourceTree = "<group>"; };
+		CCCD55A82509617A004B20D0 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		CCCD55AA250961F0004B20D0 /* Departure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departure.swift; sourceTree = "<group>"; };
+		CCCD55AC250963A7004B20D0 /* Arrival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrival.swift; sourceTree = "<group>"; };
+		CCCD55AE25096424004B20D0 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		CCCD55B02509676F004B20D0 /* Aircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircraft.swift; sourceTree = "<group>"; };
+		CCCD55B225096D11004B20D0 /* LiveLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +215,12 @@
 		CC9A3C0725059D1C0019C07F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CCCD55A82509617A004B20D0 /* Flight.swift */,
+				CCCD55AA250961F0004B20D0 /* Departure.swift */,
+				CCCD55AC250963A7004B20D0 /* Arrival.swift */,
+				CCCD55AE25096424004B20D0 /* File.swift */,
+				CCCD55B02509676F004B20D0 /* Aircraft.swift */,
+				CCCD55B225096D11004B20D0 /* LiveLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -406,12 +424,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9A3C27250600440019C07F /* CommunityPostTableViewCell.swift in Sources */,
+				CCCD55AD250963A7004B20D0 /* Arrival.swift in Sources */,
+				CCCD55AB250961F0004B20D0 /* Departure.swift in Sources */,
 				CC9A3C1D2505F8090019C07F /* FlightsViewController.swift in Sources */,
 				CC959DDE2506D0EF006DCB9C /* SearchCriteriaViewController.swift in Sources */,
 				CC9A3C192505F7DD0019C07F /* CommunityTableViewController.swift in Sources */,
 				CC9A3BD2250598E20019C07F /* AppDelegate.swift in Sources */,
+				CCCD55B12509676F004B20D0 /* Aircraft.swift in Sources */,
 				CC959DD92506CD0B006DCB9C /* FlightSearchViewController.swift in Sources */,
+				CCCD55B325096D11004B20D0 /* LiveLocation.swift in Sources */,
 				CC9A3C0D2505BFA00019C07F /* RootTabBarController.swift in Sources */,
+				CCCD55A92509617A004B20D0 /* Flight.swift in Sources */,
+				CCCD55AF25096424004B20D0 /* File.swift in Sources */,
 				CC9A3BD4250598E20019C07F /* SceneDelegate.swift in Sources */,
 				CC9A3C102505C1110019C07F /* SettingsViewController.swift in Sources */,
 			);
