@@ -20,6 +20,14 @@ class CommunityPostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.width / 2;
+        
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
+    }
+    
+    override func layoutSubviews() {
+         super.layoutSubviews()
+
+    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

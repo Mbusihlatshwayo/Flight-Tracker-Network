@@ -41,6 +41,9 @@
                         <constraint firstAttribute="width" constant="150" id="cve-eA-CkF"/>
                     </constraints>
                     <state key="normal" title="Airline"/>
+                    <connections>
+                        <action selector="searchByAirline:" destination="-1" eventType="touchUpInside" id="W5u-S6-UAY"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NK-p0-cws">
                     <rect key="frame" x="112.5" y="182" width="150" height="30"/>
@@ -49,6 +52,9 @@
                         <constraint firstAttribute="width" constant="150" id="OHn-Wu-b7j"/>
                     </constraints>
                     <state key="normal" title="Departure Airport"/>
+                    <connections>
+                        <action selector="searchByDepartureAirport:" destination="-1" eventType="touchUpInside" id="u57-FU-5RN"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afM-fh-vZt">
                     <rect key="frame" x="112.5" y="262" width="150" height="30"/>
@@ -57,6 +63,9 @@
                         <constraint firstAttribute="width" constant="150" id="mRd-Dd-Bbd"/>
                     </constraints>
                     <state key="normal" title="Arrival Airport"/>
+                    <connections>
+                        <action selector="searchByArrivalAirport:" destination="-1" eventType="touchUpInside" id="vqx-cG-Agt"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

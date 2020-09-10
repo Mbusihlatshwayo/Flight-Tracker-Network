@@ -18,18 +18,26 @@ class SearchCriteriaViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.title = "Search"
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
-
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func presentSearchViewController(title: String) {
+        let vc = SearchViewController()
+        vc.title = title
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
-    */
+    
+    @IBAction func searchByAirline(_ sender: Any) {
+        presentSearchViewController(title: "Airlines")
+    }
+    
+    @IBAction func searchByDepartureAirport(_ sender: Any) {
+        presentSearchViewController(title: "Airports")
+    }
+    
+    @IBAction func searchByArrivalAirport(_ sender: Any) {
+        presentSearchViewController(title: "Airports")
+    }
 
 }
