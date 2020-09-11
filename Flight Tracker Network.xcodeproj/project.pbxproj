@@ -27,6 +27,8 @@
 		CC9A3C27250600440019C07F /* CommunityPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A3C26250600440019C07F /* CommunityPostTableViewCell.swift */; };
 		CCBFEEB62509C2E500E29882 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBFEEB42509C2E500E29882 /* SearchViewController.swift */; };
 		CCBFEEB72509C2E500E29882 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCBFEEB52509C2E500E29882 /* SearchViewController.xib */; };
+		CCBFEEBA250AF9DF00E29882 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBFEEB9250AF9DF00E29882 /* Router.swift */; };
+		CCBFEEBE250B397700E29882 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBFEEBD250B397700E29882 /* Constants.swift */; };
 		CCCD55A92509617A004B20D0 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55A82509617A004B20D0 /* Flight.swift */; };
 		CCCD55AB250961F0004B20D0 /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55AA250961F0004B20D0 /* Departure.swift */; };
 		CCCD55AD250963A7004B20D0 /* Arrival.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55AC250963A7004B20D0 /* Arrival.swift */; };
@@ -80,6 +82,8 @@
 		CC9A3C26250600440019C07F /* CommunityPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostTableViewCell.swift; sourceTree = "<group>"; };
 		CCBFEEB42509C2E500E29882 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CCBFEEB52509C2E500E29882 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CCBFEEB9250AF9DF00E29882 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CCBFEEBD250B397700E29882 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CCCD55A82509617A004B20D0 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		CCCD55AA250961F0004B20D0 /* Departure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departure.swift; sourceTree = "<group>"; };
 		CCCD55AC250963A7004B20D0 /* Arrival.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrival.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		CC9A3BD0250598E20019C07F /* Flight Tracker Network */ = {
 			isa = PBXGroup;
 			children = (
+				CCBFEEB8250AF9C700E29882 /* Networking */,
 				CC9A3C0125059ABF0019C07F /* Supporting Files */,
 				CC9A3C0425059CBB0019C07F /* App */,
 			);
@@ -289,6 +294,15 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		CCBFEEB8250AF9C700E29882 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CCBFEEBD250B397700E29882 /* Constants.swift */,
+				CCBFEEB9250AF9DF00E29882 /* Router.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -428,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCBFEEB62509C2E500E29882 /* SearchViewController.swift in Sources */,
+				CCBFEEBE250B397700E29882 /* Constants.swift in Sources */,
 				CC9A3C27250600440019C07F /* CommunityPostTableViewCell.swift in Sources */,
 				CCCD55AD250963A7004B20D0 /* Arrival.swift in Sources */,
 				CCCD55AB250961F0004B20D0 /* Departure.swift in Sources */,
@@ -435,6 +450,7 @@
 				CC959DDE2506D0EF006DCB9C /* SearchCriteriaViewController.swift in Sources */,
 				CC9A3C192505F7DD0019C07F /* CommunityTableViewController.swift in Sources */,
 				CC9A3BD2250598E20019C07F /* AppDelegate.swift in Sources */,
+				CCBFEEBA250AF9DF00E29882 /* Router.swift in Sources */,
 				CCCD55B12509676F004B20D0 /* Aircraft.swift in Sources */,
 				CCCD55B325096D11004B20D0 /* LiveLocation.swift in Sources */,
 				CC9A3C0D2505BFA00019C07F /* RootTabBarController.swift in Sources */,
