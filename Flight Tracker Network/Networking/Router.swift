@@ -55,4 +55,11 @@ enum Router {
                 URLQueryItem(name: "flight_status", value: "active")]
     }
   }
+    
+    var method: String {
+      switch self {
+      case .getFlightsByAirline, .getFlightsByDepartureAirport, .getFlightsByArrivalAirport, .getLiveFlights:
+          return "GET"
+      }
+    }
 }
