@@ -20,6 +20,24 @@ class FlightsViewController: UIViewController {
         self.tabBarController?.navigationItem.title = "Flights"
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
     }
+    
+    func getActiveFlights() {
+        ServiceLayer.request(router: Router.getLiveFlights) { (result: Result<FlightJSON, Error>) in
+            switch result {
+            case .success(let responseObject):
+                print(result)
+                print("json data \(responseObject.data)")
+                if let flightsArray = responseObject.data {
+                    for flight in flightsArray {
+                        print(flight.flight_status)
+                        print(flight.airline?.name)
+                    }
+                }
+            case .failure:
+                print(result)
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

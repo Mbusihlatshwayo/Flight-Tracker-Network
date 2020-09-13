@@ -10,7 +10,7 @@ import Foundation
 
 class ServiceLayer {
 
-    class func request<T: Codable>(router: Router, completion: @escaping (Result<[String: [T]], Error>) -> ()) {
+    class func request(router: Router, completion: @escaping (Result<FlightJSON, Error>) -> ()) {
      
         var components = URLComponents()
         components.scheme = router.scheme
@@ -33,12 +33,11 @@ class ServiceLayer {
                 return
             }
          
-            print("SERVICE LAYER: RESPONSE\(response), DATA: \(data)")
-//            let responseObject = try! JSONDecoder().decode([String: [T]].self, from: data)
-//
-//            DispatchQueue.main.async {
-//                completion(.success(responseObject))
-//            }
+            print("SERVICE LAYER: RESPONSE\(response!), DATA: \(data)")
+            let responseObject = try! JSONDecoder().decode(FlightJSON.self, from: data)
+            DispatchQueue.main.async {
+                completion(.success(responseObject))
+            }
         }
         dataTask.resume()
     }

@@ -12,16 +12,6 @@ class SearchCriteriaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        ServiceLayer.request(router: Router.getLiveFlights) { (result: Result<[String : [Flight]], Error>) in
-            switch result {
-            case .success:
-                print(result)
-            case .failure:
-                print(result)
-            }
-        }
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -47,5 +37,4 @@ class SearchCriteriaViewController: UIViewController {
     @IBAction func searchByArrivalAirport(_ sender: Any) {
         presentSearchViewController(title: "Airports")
     }
-
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0A22E2250DC623000F74BD /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A22E1250DC623000F74BD /* Pagination.swift */; };
 		CC5BABD9250D952F00BD1F12 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABD8250D952F00BD1F12 /* ServiceLayer.swift */; };
 		CC5BABDD250DA87700BD1F12 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABDC250DA87700BD1F12 /* Flight.swift */; };
 		CC5BABDF250DABBB00BD1F12 /* FlightJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC0A22E1250DC623000F74BD /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		CC5BABD8250D952F00BD1F12 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		CC5BABDC250DA87700BD1F12 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightJSONResponse.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				CCCD55B225096D11004B20D0 /* LiveLocation.swift */,
 				CC5BABDC250DA87700BD1F12 /* Flight.swift */,
 				CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */,
+				CC0A22E1250DC623000F74BD /* Pagination.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				CCBFEEB62509C2E500E29882 /* SearchViewController.swift in Sources */,
 				CCBFEEBE250B397700E29882 /* Constants.swift in Sources */,
 				CC9A3C27250600440019C07F /* CommunityPostTableViewCell.swift in Sources */,
+				CC0A22E2250DC623000F74BD /* Pagination.swift in Sources */,
 				CCCD55AD250963A7004B20D0 /* Arrival.swift in Sources */,
 				CCCD55AB250961F0004B20D0 /* Departure.swift in Sources */,
 				CC9A3C1D2505F8090019C07F /* FlightsViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  FlightJSONResponse.swift
+//  Pagination.swift
 //  Flight Tracker Network
 //
 //  Created by Mbusi Hlatshwayo on 9/12/20.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-class FlightJSON: Codable {
-    var pagination: Pagination
-    var data: [FlightData]?
+class Pagination: Codable {
+    var limit: Int?
+    var offset: Int?
+    var count: Int?
+    var total: Int?
 }
