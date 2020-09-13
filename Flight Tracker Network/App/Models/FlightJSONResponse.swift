@@ -1,5 +1,5 @@
 //
-//  Flight.swift
+//  FlightJSONResponse.swift
 //  Flight Tracker Network
 //
 //  Created by Mbusi Hlatshwayo on 9/12/20.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-class Flight: Codable {
-    var number: String?
-    var iata: String?
-    var iaco: String?
+class FlightJSON: Codable {
+    var FlightData: [FlightData]?
 }

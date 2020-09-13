@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Arrival {
+class Arrival: Codable {
     var airport: String?
     var timezone: String?
-    var iataAirportCode: String?
-    var iacoAirportCode: String?
+    var iata: String?
+    var icao: String?
     var terminal: String?
     var gate: String?
     var baggage: String?
@@ -20,6 +20,6 @@ class Arrival {
     var scheduled: String?
     var estimated: String?
     var actual: String?
-    var estimatedRunway: String?
-    var actualRunway: String?
+    var estimated_runway: String?
+    var actual_runway: String?
 }

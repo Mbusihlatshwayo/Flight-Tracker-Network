@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Airline.swift
 //  Flight Tracker Network
 //
 //  Created by Mbusi Hlatshwayo on 9/9/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Airline {
+class Airline: Codable {
     var name: String?
-    var iataAirlineCode: String?
-    var iacoAirlineCode: String?
+    var iata: String?
+    var icao: String?
 }

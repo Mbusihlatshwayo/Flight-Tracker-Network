@@ -13,6 +13,14 @@ class SearchCriteriaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ServiceLayer.request(router: Router.getLiveFlights) { (result: Result<[String : [Flight]], Error>) in
+            switch result {
+            case .success:
+                print(result)
+            case .failure:
+                print(result)
+            }
+        }
         // Do any additional setup after loading the view.
     }
 

@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Aircraft {
+class Aircraft: Codable {
     var registration: String?
-    var iataAircraftCode: String?
-    var iacoAircraftCode: String?
+    var iata: String?
+    var icao: String?
     var icao24: String?
 }

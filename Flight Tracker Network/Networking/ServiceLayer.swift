@@ -33,11 +33,12 @@ class ServiceLayer {
                 return
             }
          
-            let responseObject = try! JSONDecoder().decode([String: [T]].self, from: data)
-         
-            DispatchQueue.main.async {
-                completion(.success(responseObject))
-            }
+            print("SERVICE LAYER: RESPONSE\(response), DATA: \(data)")
+//            let responseObject = try! JSONDecoder().decode([String: [T]].self, from: data)
+//
+//            DispatchQueue.main.async {
+//                completion(.success(responseObject))
+//            }
         }
         dataTask.resume()
     }

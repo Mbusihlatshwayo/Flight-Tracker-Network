@@ -8,13 +8,13 @@
 
 import Foundation
 
-class LiveLocation {
-    var timeUpdated: String?
+class LiveLocation: Codable {
+    var updated: String?
     var latitude: Float?
     var longitude: Float?
     var altitude: Float?
-    var heading: Float?
-    var speed: Float?
-    var verticalSpeed: Float?
-    var isGround: Bool?
+    var direction: Float?
+    var speed_horizontal: Float?
+    var speed_vertical: Float?
+    var is_ground: Bool?
 }
