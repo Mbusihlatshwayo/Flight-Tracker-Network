@@ -19,6 +19,7 @@ class ServiceLayer {
         components.queryItems = router.parameters
       
         guard let url = components.url else { return }
+        print("URL REQUESTED WAS: \(url)")
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = router.method
         

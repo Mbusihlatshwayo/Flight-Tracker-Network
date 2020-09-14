@@ -140,6 +140,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CC0A22EC250F21BD000F74BD /* Map Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A22EA250F0D88000F74BD /* FlightAnnotationView.swift */,
+			);
+			path = "Map Annotation";
+			sourceTree = "<group>";
+		};
 		CC959DDB2506CD12006DCB9C /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,9 +233,9 @@
 		CC9A3C0525059CF30019C07F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC0A22EC250F21BD000F74BD /* Map Annotation */,
 				CC9A3C28250601050019C07F /* LaunchScreen */,
 				CC9A3C232505F8A10019C07F /* TableView Cells */,
-				CC0A22EA250F0D88000F74BD /* FlightAnnotationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

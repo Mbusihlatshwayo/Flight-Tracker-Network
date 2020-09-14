@@ -13,7 +13,7 @@ enum Router {
     case getFlightsByAirline(airline: String)
     case getFlightsByDepartureAirport(departureAirport: String)
     case getFlightsByArrivalAirport(arrivalAirport: String)
-    case getLiveFlights
+    case getLiveFlights(offsetValue: Int)
     
     var scheme: String {
         switch self {
@@ -50,9 +50,10 @@ enum Router {
     case .getFlightsByArrivalAirport(let arrivalAirport):
       return [URLQueryItem(name: "access_key", value: aviationAPIAccessKey),
               URLQueryItem(name: "arr_icao", value: arrivalAirport)]
-    case .getLiveFlights:
+    case .getLiveFlights(let offsetValue):
         return [URLQueryItem(name: "access_key", value: aviationAPIAccessKey),
-                URLQueryItem(name: "flight_status", value: "active")]
+                URLQueryItem(name: "flight_status", value: "active"),
+                URLQueryItem(name: "offset", value: "\(offsetValue)")]
     }
   }
     

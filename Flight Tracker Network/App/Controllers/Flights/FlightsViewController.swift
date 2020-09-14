@@ -13,7 +13,8 @@ final class FlightsViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var flightsMapView: MKMapView!
     var activeFlights = [FlightData]()
-    
+    var apiOffset: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         flightsMapView.delegate = self
@@ -31,17 +32,22 @@ final class FlightsViewController: UIViewController, MKMapViewDelegate {
     }
     
     func getActiveFlights() {
-        ServiceLayer.request(router: Router.getLiveFlights) { (result: Result<FlightJSON, Error>) in
-            switch result {
-            case .success(let responseObject):
-                if let flightsArray = responseObject.data {
-                    for flight in flightsArray {
-                        self.activeFlights.append(flight)
+         if self.apiOffset <= 1000 {
+            ServiceLayer.request(router: Router.getLiveFlights(offsetValue: apiOffset)) { (result: Result<FlightJSON, Error>) in
+                switch result {
+                case .success(let responseObject):
+                    if let flightsArray = responseObject.data {
+                        for flight in flightsArray {
+                            self.activeFlights.append(flight)
+                        }
                     }
+                    self.displayActiveFlights()
+                    self.apiOffset += 100
+                    self.getActiveFlights()
+                case .failure(let err):
+                    print("ERROR \(err)")
+                    return
                 }
-                self.displayActiveFlights()
-            case .failure(let err):
-                print("ERROR \(err)")
             }
         }
     }
@@ -50,7 +56,7 @@ final class FlightsViewController: UIViewController, MKMapViewDelegate {
         for activeFlight in activeFlights {
             if let flightLatitude = activeFlight.live?.latitude, let flightLongitude = activeFlight.live?.longitude {
                 let flightCoordinates = CLLocationCoordinate2D(latitude: flightLatitude, longitude: flightLongitude)
-                let flightAnnotation = FlightAnnotation(title: activeFlight.flight?.iaco ?? "no flight # found", coordinate: flightCoordinates, heading: activeFlight.live?.direction ?? 0)
+                let flightAnnotation = FlightAnnotation(title: activeFlight.flight?.icao, coordinate: flightCoordinates, heading: activeFlight.live?.direction ?? 0)
                 flightsMapView.addAnnotation(flightAnnotation)
             }
         }

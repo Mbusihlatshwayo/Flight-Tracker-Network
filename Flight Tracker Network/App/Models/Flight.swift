@@ -11,5 +11,6 @@ import Foundation
 class Flight: Codable {
     var number: String?
     var iata: String?
-    var iaco: String?
+    var icao: String?
+    var codeshared: [String: String]?
 }
