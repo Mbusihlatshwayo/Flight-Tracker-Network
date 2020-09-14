@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CC0A22E2250DC623000F74BD /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A22E1250DC623000F74BD /* Pagination.swift */; };
+		CC0A22E7250EC52F000F74BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A22E6250EC52F000F74BD /* Extensions.swift */; };
+		CC0A22E9250EC6C1000F74BD /* FlightAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A22E8250EC6C1000F74BD /* FlightAnnotation.swift */; };
+		CC0A22EB250F0D88000F74BD /* FlightAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A22EA250F0D88000F74BD /* FlightAnnotationView.swift */; };
 		CC5BABD9250D952F00BD1F12 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABD8250D952F00BD1F12 /* ServiceLayer.swift */; };
 		CC5BABDD250DA87700BD1F12 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABDC250DA87700BD1F12 /* Flight.swift */; };
 		CC5BABDF250DABBB00BD1F12 /* FlightJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */; };
@@ -61,6 +64,9 @@
 
 /* Begin PBXFileReference section */
 		CC0A22E1250DC623000F74BD /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		CC0A22E6250EC52F000F74BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CC0A22E8250EC6C1000F74BD /* FlightAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAnnotation.swift; sourceTree = "<group>"; };
+		CC0A22EA250F0D88000F74BD /* FlightAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAnnotationView.swift; sourceTree = "<group>"; };
 		CC5BABD8250D952F00BD1F12 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		CC5BABDC250DA87700BD1F12 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightJSONResponse.swift; sourceTree = "<group>"; };
@@ -126,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0A22E5250EC513000F74BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC0A22E6250EC52F000F74BD /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CC959DDB2506CD12006DCB9C /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +174,7 @@
 		CC9A3BD0250598E20019C07F /* Flight Tracker Network */ = {
 			isa = PBXGroup;
 			children = (
+				CC0A22E5250EC513000F74BD /* Extensions */,
 				CCBFEEB8250AF9C700E29882 /* Networking */,
 				CC9A3C0125059ABF0019C07F /* Supporting Files */,
 				CC9A3C0425059CBB0019C07F /* App */,
@@ -212,6 +227,7 @@
 			children = (
 				CC9A3C28250601050019C07F /* LaunchScreen */,
 				CC9A3C232505F8A10019C07F /* TableView Cells */,
+				CC0A22EA250F0D88000F74BD /* FlightAnnotationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +256,7 @@
 				CC5BABDC250DA87700BD1F12 /* Flight.swift */,
 				CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */,
 				CC0A22E1250DC623000F74BD /* Pagination.swift */,
+				CC0A22E8250EC6C1000F74BD /* FlightAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,6 +472,7 @@
 			files = (
 				CCBFEEB62509C2E500E29882 /* SearchViewController.swift in Sources */,
 				CCBFEEBE250B397700E29882 /* Constants.swift in Sources */,
+				CC0A22E9250EC6C1000F74BD /* FlightAnnotation.swift in Sources */,
 				CC9A3C27250600440019C07F /* CommunityPostTableViewCell.swift in Sources */,
 				CC0A22E2250DC623000F74BD /* Pagination.swift in Sources */,
 				CCCD55AD250963A7004B20D0 /* Arrival.swift in Sources */,
@@ -462,12 +480,14 @@
 				CC9A3C1D2505F8090019C07F /* FlightsViewController.swift in Sources */,
 				CC959DDE2506D0EF006DCB9C /* SearchCriteriaViewController.swift in Sources */,
 				CC5BABD9250D952F00BD1F12 /* ServiceLayer.swift in Sources */,
+				CC0A22E7250EC52F000F74BD /* Extensions.swift in Sources */,
 				CC9A3C192505F7DD0019C07F /* CommunityTableViewController.swift in Sources */,
 				CC9A3BD2250598E20019C07F /* AppDelegate.swift in Sources */,
 				CCBFEEBA250AF9DF00E29882 /* Router.swift in Sources */,
 				CCCD55B12509676F004B20D0 /* Aircraft.swift in Sources */,
 				CC5BABDD250DA87700BD1F12 /* Flight.swift in Sources */,
 				CCCD55B325096D11004B20D0 /* LiveLocation.swift in Sources */,
+				CC0A22EB250F0D88000F74BD /* FlightAnnotationView.swift in Sources */,
 				CC9A3C0D2505BFA00019C07F /* RootTabBarController.swift in Sources */,
 				CCCD55A92509617A004B20D0 /* FlightData.swift in Sources */,
 				CCCD55AF25096424004B20D0 /* Airline.swift in Sources */,

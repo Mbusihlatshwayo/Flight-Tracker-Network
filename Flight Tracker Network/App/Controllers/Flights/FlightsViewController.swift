@@ -7,45 +7,52 @@
 //
 
 import UIKit
+import MapKit
 
-class FlightsViewController: UIViewController {
+final class FlightsViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var flightsMapView: MKMapView!
+    var activeFlights = [FlightData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        flightsMapView.delegate = self
+        flightsMapView.register(FlightAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        getActiveFlights()
     }
-
 
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "Flights"
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
     }
     
+    func displayActiveFlights() {
+        setFlightAnnotations(activeFlights: activeFlights)
+    }
+    
     func getActiveFlights() {
         ServiceLayer.request(router: Router.getLiveFlights) { (result: Result<FlightJSON, Error>) in
             switch result {
             case .success(let responseObject):
-                print(result)
-                print("json data \(responseObject.data)")
                 if let flightsArray = responseObject.data {
                     for flight in flightsArray {
-                        print(flight.flight_status)
-                        print(flight.airline?.name)
+                        self.activeFlights.append(flight)
                     }
                 }
-            case .failure:
-                print(result)
+                self.displayActiveFlights()
+            case .failure(let err):
+                print("ERROR \(err)")
             }
         }
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setFlightAnnotations(activeFlights: [FlightData]) {
+        for activeFlight in activeFlights {
+            if let flightLatitude = activeFlight.live?.latitude, let flightLongitude = activeFlight.live?.longitude {
+                let flightCoordinates = CLLocationCoordinate2D(latitude: flightLatitude, longitude: flightLongitude)
+                let flightAnnotation = FlightAnnotation(title: activeFlight.flight?.iaco ?? "no flight # found", coordinate: flightCoordinates, heading: activeFlight.live?.direction ?? 0)
+                flightsMapView.addAnnotation(flightAnnotation)
+            }
+        }
     }
-    */
-
 }

@@ -10,10 +10,10 @@ import Foundation
 
 class LiveLocation: Codable {
     var updated: String?
-    var latitude: Float?
-    var longitude: Float?
+    var latitude: Double?
+    var longitude: Double?
     var altitude: Float?
-    var direction: Float?
+    var direction: Double?
     var speed_horizontal: Float?
     var speed_vertical: Float?
     var is_ground: Bool?

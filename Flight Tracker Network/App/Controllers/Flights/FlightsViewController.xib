@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlightsViewController" customModule="Flight_Tracker_Network" customModuleProvider="target">
             <connections>
+                <outlet property="flightsMapView" destination="A1b-oK-QSw" id="oKa-gR-X9P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

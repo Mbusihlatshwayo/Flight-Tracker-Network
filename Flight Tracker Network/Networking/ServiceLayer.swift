@@ -32,8 +32,6 @@ class ServiceLayer {
             guard response != nil, let data = data else {
                 return
             }
-         
-            print("SERVICE LAYER: RESPONSE\(response!), DATA: \(data)")
             let responseObject = try! JSONDecoder().decode(FlightJSON.self, from: data)
             DispatchQueue.main.async {
                 completion(.success(responseObject))
