@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         let navigationController = UINavigationController()
         navigationController.viewControllers = [RootTabBarController()]
-        navigationController.navigationBar.barTintColor = UIColor.systemPink
+        navigationController.navigationBar.barTintColor = UIColor.systemGray
         guard let winScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: winScene)
         window?.rootViewController = navigationController

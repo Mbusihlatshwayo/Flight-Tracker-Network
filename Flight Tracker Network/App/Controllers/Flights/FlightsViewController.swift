@@ -19,7 +19,7 @@ final class FlightsViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         flightsMapView.delegate = self
         flightsMapView.register(FlightAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        getActiveFlights()
+//        getActiveFlights()
     }
 
     override func viewWillAppear(_ animated: Bool) {
