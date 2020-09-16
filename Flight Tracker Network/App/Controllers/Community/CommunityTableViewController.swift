@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CommunityTableViewController: UITableViewController {
         
     lazy var addPostButton = UIBarButtonItem(image: UIImage(named: "newPost"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,14 @@ class CommunityTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.rightBarButtonItem = addPostButton
         self.tabBarController?.navigationItem.title = "FTN Posts"
+        
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+          // ...
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(handle!)
     }
     // MARK: - Table view data source
 
@@ -53,9 +63,9 @@ class CommunityTableViewController: UITableViewController {
         400
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        10
-    }
+//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        10
+//    }
 
     /*
     // Override to support conditional editing of the table view.

@@ -6,6 +6,10 @@ target 'Flight Tracker Network' do
   use_frameworks!
 
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+
+
 
 
   target 'Flight Tracker NetworkTests' do

@@ -36,7 +36,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwc-aK-yKv">
                     <rect key="frame" x="112.5" y="102" width="150" height="30"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.56862745098039214" green="0.76862745098039209" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="cve-eA-CkF"/>
                     </constraints>
@@ -47,7 +47,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NK-p0-cws">
                     <rect key="frame" x="112.5" y="182" width="150" height="30"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.56862745098039214" green="0.76862745098039209" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="OHn-Wu-b7j"/>
                     </constraints>
@@ -58,7 +58,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afM-fh-vZt">
                     <rect key="frame" x="112.5" y="262" width="150" height="30"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.56862745098039214" green="0.76862745098039209" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="mRd-Dd-Bbd"/>
                     </constraints>

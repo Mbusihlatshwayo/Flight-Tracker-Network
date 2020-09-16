@@ -17,16 +17,16 @@ class RootTabBarController: UITabBarController {
         let flightsViewController = FlightsViewController()
         flightsViewController.tabBarItem = UITabBarItem(title: "Flights", image: nil, tag: 0)
 
-        let settingsViewController = SettingsViewController()
-        settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 1)
+        let profileViewController = ProfileViewController()
+        profileViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profileIcon"), selectedImage: UIImage(named: "profileSelected"))
 
         let communityViewController = CommunityTableViewController()
         communityViewController.tabBarItem = UITabBarItem(title: "Posts", image: nil, tag: 2)
         
         let searchCriteriaViewController = SearchCriteriaViewController()
-        searchCriteriaViewController.tabBarItem = UITabBarItem(title: "Search", image: nil, tag: 3)
+        searchCriteriaViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "searchIcon"), selectedImage: UIImage(named: "searchIconFilled"))
         
-        self.viewControllers = [flightsViewController ,communityViewController , searchCriteriaViewController, settingsViewController]
+        self.viewControllers = [flightsViewController ,communityViewController , searchCriteriaViewController, profileViewController]
     
     }
     
