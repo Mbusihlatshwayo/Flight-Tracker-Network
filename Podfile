@@ -8,6 +8,7 @@ target 'Flight Tracker Network' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'Firebase/Storage'
 
 
 

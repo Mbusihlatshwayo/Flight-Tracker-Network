@@ -19,6 +19,7 @@ class AuthenticationViewController: UIViewController {
 
         googleSignInButton.style = .wide
         GIDSignIn.sharedInstance()?.presentingViewController = self
+        
     }
 
     /*

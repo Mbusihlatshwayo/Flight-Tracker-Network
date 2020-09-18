@@ -51,6 +51,7 @@
 		CCCD55B12509676F004B20D0 /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55B02509676F004B20D0 /* Aircraft.swift */; };
 		CCCD55B325096D11004B20D0 /* LiveLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD55B225096D11004B20D0 /* LiveLocation.swift */; };
 		CCCD55B525099A85004B20D0 /* airlines.json in Resources */ = {isa = PBXBuildFile; fileRef = CCCD55B425099A85004B20D0 /* airlines.json */; };
+		CCE77C20251458AC00A794D4 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE77C1F251458AC00A794D4 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		CCCD55B02509676F004B20D0 /* Aircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircraft.swift; sourceTree = "<group>"; };
 		CCCD55B225096D11004B20D0 /* LiveLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLocation.swift; sourceTree = "<group>"; };
 		CCCD55B425099A85004B20D0 /* airlines.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airlines.json; sourceTree = "<group>"; };
+		CCE77C1F251458AC00A794D4 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		F1F533E59755F669429CB9DB /* Pods-Flight Tracker NetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flight Tracker NetworkTests.release.xcconfig"; path = "Target Support Files/Pods-Flight Tracker NetworkTests/Pods-Flight Tracker NetworkTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,6 +283,7 @@
 		CC9A3C0525059CF30019C07F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CCE77C1E2514589A00A794D4 /* Image Picker */,
 				CC0A22EC250F21BD000F74BD /* Map Annotation */,
 				CC9A3C28250601050019C07F /* LaunchScreen */,
 				CC9A3C232505F8A10019C07F /* TableView Cells */,
@@ -387,6 +390,14 @@
 				CC5BABD8250D952F00BD1F12 /* ServiceLayer.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CCE77C1E2514589A00A794D4 /* Image Picker */ = {
+			isa = PBXGroup;
+			children = (
+				CCE77C1F251458AC00A794D4 /* ImagePicker.swift */,
+			);
+			path = "Image Picker";
 			sourceTree = "<group>";
 		};
 		F969A2F181D090A3F78A0B4B /* Frameworks */ = {
@@ -698,6 +709,7 @@
 				CC959DDE2506D0EF006DCB9C /* SearchCriteriaViewController.swift in Sources */,
 				CC5BABD9250D952F00BD1F12 /* ServiceLayer.swift in Sources */,
 				CC0A22E7250EC52F000F74BD /* Extensions.swift in Sources */,
+				CCE77C20251458AC00A794D4 /* ImagePicker.swift in Sources */,
 				CC9A3C192505F7DD0019C07F /* CommunityTableViewController.swift in Sources */,
 				CC9A3BD2250598E20019C07F /* AppDelegate.swift in Sources */,
 				CCBFEEBA250AF9DF00E29882 /* Router.swift in Sources */,
@@ -864,14 +876,18 @@
 			baseConfigurationReference = 7BBA9F046D8E7DF43F80203B /* Pods-Flight Tracker Network.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 56R468N52S;
 				INFOPLIST_FILE = "Flight Tracker Network/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-Network";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbusi.FTN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "FTN Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -882,14 +898,18 @@
 			baseConfigurationReference = A911A8F69EE44508252BDCD9 /* Pods-Flight Tracker Network.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 56R468N52S;
 				INFOPLIST_FILE = "Flight Tracker Network/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mbusi.Flight-Tracker-Network";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbusi.FTN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "FTN Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
