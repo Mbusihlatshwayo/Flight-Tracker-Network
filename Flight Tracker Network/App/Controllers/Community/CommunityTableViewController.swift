@@ -8,12 +8,14 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseStorage
 
 class CommunityTableViewController: UITableViewController {
         
     lazy var newPostButton = UIBarButtonItem(image: UIImage(named: "newPost"), style: UIBarButtonItem.Style.plain, target: nil, action: nil)
     var handle: AuthStateDidChangeListenerHandle?
     var imagePicker: ImagePicker!
+    private let firebaseStorage = Storage.storage().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +83,23 @@ class CommunityTableViewController: UITableViewController {
 extension CommunityTableViewController: ImagePickerDelegate {
     func didSelect(image: UIImage?) {
 //        self.imageView.image = image
-        print("Selected image \(image?)")
+        guard let imageData = image?.pngData() else {
+           return
+        }
+        print("got image data \(imageData)")
+        let firStorageReference = firebaseStorage.child("images/post.png")
+        firStorageReference.putData(imageData, metadata: nil) { (_, error) in
+            guard error == nil else {
+                print("Firebase upload failed with error \(error!)")
+                return
+            }
+            firStorageReference.downloadURL { (url, error) in
+                guard let url = url, error == nil else {
+                    return
+                }
+                let urlString = url.absoluteString
+                print("URL String for image = \(urlString)")
+            }
+        }
     }
 }
