@@ -9,9 +9,7 @@ target 'Flight Tracker Network' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'Firebase/Storage'
-
-
-
+  pod 'Firebase/Database'
 
   target 'Flight Tracker NetworkTests' do
     inherit! :search_paths

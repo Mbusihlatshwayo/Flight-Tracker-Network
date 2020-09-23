@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseStorage
+import FirebaseDatabase
 
 class CommunityTableViewController: UITableViewController {
         
@@ -16,6 +17,8 @@ class CommunityTableViewController: UITableViewController {
     var handle: AuthStateDidChangeListenerHandle?
     var imagePicker: ImagePicker!
     private let firebaseStorage = Storage.storage().reference()
+    
+    var ref = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,59 +50,61 @@ class CommunityTableViewController: UITableViewController {
     @objc func didPressNewPost(sender: UIButton) {
         self.imagePicker.present(from: sender)
     }
+    
+    //MARK: - Navigation
+    
+    func presentImagePostViewController(title: String, with image: UIImage) {
+        let vc = CreatePostViewController()
+        vc.title = title
+        vc.postImage = image
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "communityPostCell", for: indexPath)
-//        cell.layer.borderColor = tableView.separatorColor?.cgColor
-//        cell.layer.borderWidth = 1.0
-//        cell.layer.cornerRadius = 6.0
-
-        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         400
     }
-    
-//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        10
-//    }
 
 }
 
 extension CommunityTableViewController: ImagePickerDelegate {
+    
     func didSelect(image: UIImage?) {
-//        self.imageView.image = image
-        guard let imageData = image?.pngData() else {
+        guard let imageData = image?.pngData(), let selectedImage = image else {
            return
         }
-        print("got image data \(imageData)")
-        let firStorageReference = firebaseStorage.child("images/post.png")
-        firStorageReference.putData(imageData, metadata: nil) { (_, error) in
-            guard error == nil else {
-                print("Firebase upload failed with error \(error!)")
-                return
-            }
-            firStorageReference.downloadURL { (url, error) in
-                guard let url = url, error == nil else {
-                    return
-                }
-                let urlString = url.absoluteString
-                print("URL String for image = \(urlString)")
-            }
-        }
+        presentImagePostViewController(title: "New Post", with: selectedImage)
+
+//        print("got image data \(imageData)")
+//        let imageUUID = UUID().uuidString
+//        let firStorageReference = firebaseStorage.child("images/\(imageUUID).png")
+//        firStorageReference.putData(imageData, metadata: nil) { (_, error) in
+//            guard error == nil else {
+//                print("Firebase upload failed with error \(error!)")
+//                return
+//            }
+//            firStorageReference.downloadURL { (url, error) in
+//                guard let url = url, error == nil else {
+//                    return
+//                }
+//                let urlString = url.absoluteString
+//                print("URL String for image = \(urlString)")
+//            }
+//        }
     }
+    
 }

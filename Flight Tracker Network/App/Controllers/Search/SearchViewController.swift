@@ -16,14 +16,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // Data model: These strings will be the data for the table view cells
     let airports: [String] = ["KJFK", "KLAX", "KIAH", "KDFW", "KSFO"]
     
+    
     // cell reuse id (cells that scroll out of view can be reused)
-    let cellReuseIdentifier = "cell"
+    let cellReuseIdentifier = "searchTableViewCell"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(
+            UINib(
+                nibName: "SearchTableViewCell",
+                bundle: Bundle.main),
+            forCellReuseIdentifier: cellReuseIdentifier)
     }
 
 
@@ -34,12 +40,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create a new cell if needed or reuse an old one
-        let cell: UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as? SearchTableViewCell ?? SearchTableViewCell()
         
+        cell.codeAbbreviationLabel.text = airports[indexPath.row]
+        cell.fullNameLabel.text = "Full name"
         // set the text from the data model
-        cell.textLabel?.text = self.airports[indexPath.row]
-        
+//        cell.textLabel?.text = self.airports[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
     }
     
     /*
@@ -53,3 +64,4 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     */
 
 }
+

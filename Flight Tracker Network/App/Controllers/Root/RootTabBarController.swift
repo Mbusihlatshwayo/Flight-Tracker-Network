@@ -57,7 +57,7 @@ class RootTabBarController: UITabBarController {
         let profileTabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profileIcon"), selectedImage: UIImage(named: "profileSelected"))
 
         let flightsViewController = FlightsViewController()
-        flightsViewController.tabBarItem = UITabBarItem(title: "Flights", image: nil, tag: 0)
+        flightsViewController.tabBarItem = UITabBarItem(title: "Flights", image: UIImage(named: "flights"), selectedImage: UIImage(named: "selectedFlights"))
 
         let communityViewController = CommunityTableViewController()
         communityViewController.tabBarItem = UITabBarItem(title: "Posts", image: UIImage(named: "posts"), selectedImage: UIImage(named: "postsFilled"))

@@ -9,8 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Flight_Tracker_Network" customModuleProvider="target">
             <connections>
-                <outlet property="searchBar" destination="hIe-ui-ffc" id="3KO-SA-3GM"/>
-                <outlet property="tableView" destination="tIu-IG-AEC" id="Pe1-Gk-9Gs"/>
+                <outlet property="searchBar" destination="fis-mb-Y5o" id="UrB-Mc-Kv2"/>
+                <outlet property="tableView" destination="YKP-Xz-rYA" id="pSB-Cm-wSM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,30 +19,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hIe-ui-ffc">
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fis-mb-Y5o">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="pJF-cC-QGy"/>
+                        <constraint firstAttribute="height" constant="44" id="GQo-FM-pxn"/>
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tIu-IG-AEC">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YKP-Xz-rYA">
                     <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="tIu-IG-AEC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2N2-EV-JNs"/>
-                <constraint firstItem="tIu-IG-AEC" firstAttribute="top" secondItem="hIe-ui-ffc" secondAttribute="bottom" id="BXW-R4-qyd"/>
-                <constraint firstItem="hIe-ui-ffc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ewx-IH-jzM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tIu-IG-AEC" secondAttribute="trailing" id="RL5-Cr-7sg"/>
-                <constraint firstItem="hIe-ui-ffc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Sdb-3f-ly3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tIu-IG-AEC" secondAttribute="bottom" id="Vmd-gx-zal"/>
-                <constraint firstItem="hIe-ui-ffc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sP8-Cm-FVO"/>
+                <constraint firstItem="fis-mb-Y5o" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="EFp-EA-iL6"/>
+                <constraint firstItem="fis-mb-Y5o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Epu-eu-0qA"/>
+                <constraint firstItem="YKP-Xz-rYA" firstAttribute="top" secondItem="fis-mb-Y5o" secondAttribute="bottom" id="I7Y-lw-Ip5"/>
+                <constraint firstItem="YKP-Xz-rYA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="KYi-Gq-Z1v"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YKP-Xz-rYA" secondAttribute="trailing" id="XAz-mn-SPG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YKP-Xz-rYA" secondAttribute="bottom" id="hxw-A4-eIr"/>
+                <constraint firstItem="fis-mb-Y5o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zyl-Ya-ste"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="106"/>
+            <point key="canvasLocation" x="139" y="147"/>
         </view>
     </objects>
 </document>
