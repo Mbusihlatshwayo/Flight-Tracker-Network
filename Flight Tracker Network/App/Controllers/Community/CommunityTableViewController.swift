@@ -22,7 +22,7 @@ class CommunityTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(
             UINib(
                 nibName: "CommunityPostTableViewCell",
@@ -84,27 +84,10 @@ class CommunityTableViewController: UITableViewController {
 extension CommunityTableViewController: ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
-        guard let imageData = image?.pngData(), let selectedImage = image else {
+        guard let selectedImage = image else {
            return
         }
         presentImagePostViewController(title: "New Post", with: selectedImage)
-
-//        print("got image data \(imageData)")
-//        let imageUUID = UUID().uuidString
-//        let firStorageReference = firebaseStorage.child("images/\(imageUUID).png")
-//        firStorageReference.putData(imageData, metadata: nil) { (_, error) in
-//            guard error == nil else {
-//                print("Firebase upload failed with error \(error!)")
-//                return
-//            }
-//            firStorageReference.downloadURL { (url, error) in
-//                guard let url = url, error == nil else {
-//                    return
-//                }
-//                let urlString = url.absoluteString
-//                print("URL String for image = \(urlString)")
-//            }
-//        }
     }
     
 }

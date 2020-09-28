@@ -8,19 +8,19 @@
 
 import UIKit
 
+protocol SearchViewDelegate: NSObjectProtocol {
+    func searchViewDidSend(flightData: String)
+}
+
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    // Data model: These strings will be the data for the table view cells
     let airports: [String] = ["KJFK", "KLAX", "KIAH", "KDFW", "KSFO"]
-    
-    
-    // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "searchTableViewCell"
+    var delegate: SearchViewDelegate?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -53,15 +53,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         80
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let delegate = delegate{
+            delegate.searchViewDidSend(flightData: airports[indexPath.row])
+        }
+        self.navigationController?.popViewController(animated: true)
     }
-    */
 
 }
 

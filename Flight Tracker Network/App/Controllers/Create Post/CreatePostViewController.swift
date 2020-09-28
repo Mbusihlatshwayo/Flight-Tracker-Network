@@ -10,19 +10,21 @@ import UIKit
 import FirebaseStorage
 import FirebaseDatabase
 
-class CreatePostViewController: UIViewController {
+class CreatePostViewController: UIViewController, SearchViewDelegate {
 
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var metadataTableView: UITableView!
     private let cellReuseIdentifier = "metaDataCell"
     var postImage = UIImage()
+    var postLocation: String?
+    var postActivityIndicator = UIActivityIndicatorView()
     private let firebaseStorage = Storage.storage().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         metadataTableView.delegate = self
         metadataTableView.dataSource = self
-
+        setupActivityIndicator()
         self.metadataTableView.register(UINib(nibName: "PostMetadataTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         self.metadataTableView.tableFooterView = UIView()
     }
@@ -32,9 +34,23 @@ class CreatePostViewController: UIViewController {
         let rightBarButton = UIBarButtonItem(title: "Post", style: UIBarButtonItem.Style.done, target: self, action: #selector(didPressSharePost))
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
+    
+    func setupActivityIndicator() {
+        postActivityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
+        postActivityIndicator.center = CGPoint(x: self.view.center.x, y: self.metadataTableView.center.y)
+        postActivityIndicator.hidesWhenStopped = true
+        postActivityIndicator.style = UIActivityIndicatorView.Style.large
+        view.addSubview(postActivityIndicator)
+    }
 
     @objc func didPressSharePost() {
+        postActivityIndicator.startAnimating()
+//        view.isUserInteractionEnabled = false
+        self.navigationController?.view.isUserInteractionEnabled = false
         guard let imageData = postImage.pngData() else {
+            postActivityIndicator.stopAnimating()
+            self.navigationController?.view.isUserInteractionEnabled = true
+//            view.isUserInteractionEnabled = true
            return
         }
         print("got image data \(imageData)")
@@ -51,6 +67,9 @@ class CreatePostViewController: UIViewController {
                 }
                 let urlString = url.absoluteString
                 print("URL String for image = \(urlString)")
+                self.postActivityIndicator.stopAnimating()
+//                self.view.isUserInteractionEnabled = true
+                self.navigationController?.view.isUserInteractionEnabled = true
                 self.navigationController?.popViewController(animated: true)
             }
         }
@@ -59,7 +78,13 @@ class CreatePostViewController: UIViewController {
     func presentSearchViewController(title: String) {
         let vc = SearchViewController()
         vc.title = title
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func searchViewDidSend(flightData: String) {
+        postLocation = flightData
+        metadataTableView.reloadData()
     }
     
 }
@@ -72,10 +97,7 @@ extension CreatePostViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = metadataTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? PostMetadataTableViewCell ?? PostMetadataTableViewCell()
-        
-        // set the text from the data model
-        cell.postMetaDataLabel.text = "Set Photo Location"
-        
+        cell.postMetaDataLabel.text = postLocation ?? "Set Photo Location"
         return cell
     }
     
