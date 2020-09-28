@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseStorage
 import FirebaseDatabase
 
-class CreatePostViewController: UIViewController, SearchViewDelegate {
+class CreatePostViewController: UIViewController {
 
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var metadataTableView: UITableView!
@@ -19,6 +20,7 @@ class CreatePostViewController: UIViewController, SearchViewDelegate {
     var postLocation: String?
     var postActivityIndicator = UIActivityIndicatorView()
     private let firebaseStorage = Storage.storage().reference()
+    private let ref = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +47,10 @@ class CreatePostViewController: UIViewController, SearchViewDelegate {
 
     @objc func didPressSharePost() {
         postActivityIndicator.startAnimating()
-//        view.isUserInteractionEnabled = false
         self.navigationController?.view.isUserInteractionEnabled = false
         guard let imageData = postImage.pngData() else {
             postActivityIndicator.stopAnimating()
             self.navigationController?.view.isUserInteractionEnabled = true
-//            view.isUserInteractionEnabled = true
            return
         }
         print("got image data \(imageData)")
@@ -65,12 +65,26 @@ class CreatePostViewController: UIViewController, SearchViewDelegate {
                 guard let url = url, error == nil else {
                     return
                 }
-                let urlString = url.absoluteString
-                print("URL String for image = \(urlString)")
-                self.postActivityIndicator.stopAnimating()
-//                self.view.isUserInteractionEnabled = true
-                self.navigationController?.view.isUserInteractionEnabled = true
-                self.navigationController?.popViewController(animated: true)
+                let postURLString = url.absoluteString
+                print("URL String for image = \(postURLString)")
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    let userID = user.uid
+                    let userPhotoURLString = user.photoURL?.absoluteString
+                    let username = user.displayName
+                    let postDictionary = [
+                        "username": username,
+                        "userID": userID,
+                        "userPhotoURL": userPhotoURLString,
+                        "postPhotoURL": postURLString,
+                        "numberOfLikes": "0",
+                        "postLocation": self.postLocation
+                    ]
+                    self.ref.child("posts").child(imageUUID).setValue(postDictionary)
+                    self.postActivityIndicator.stopAnimating()
+                    self.navigationController?.view.isUserInteractionEnabled = true
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }
@@ -81,6 +95,10 @@ class CreatePostViewController: UIViewController, SearchViewDelegate {
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+}
+
+extension CreatePostViewController: SearchViewDelegate {
     
     func searchViewDidSend(flightData: String) {
         postLocation = flightData
