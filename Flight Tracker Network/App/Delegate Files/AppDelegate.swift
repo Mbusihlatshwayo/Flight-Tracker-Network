@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        let storage = Storage.storage()
+//        let storage = Storage.storage()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
@@ -69,15 +69,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
           } else {
               print("SIGNED IN TO FIREBASE")
 //            print("PRESENTING VIEW CONTROLLER \(GIDSignIn.sharedInstance()?.presentingViewController)")
-              let user = Auth.auth().currentUser
-              if let user = user {
+//              let user = Auth.auth().currentUser
+//              if let user = user {
                 // The user's ID, unique to the Firebase project.
                 // Do NOT use this value to authenticate with your backend server,
                 // if you have one. Use getTokenWithCompletion:completion: instead.
 //                let uid = user.uid
 //                let email = user.email
 //                let photoURL = user.photoURL
-              }
+//              }
           }
       }
 
