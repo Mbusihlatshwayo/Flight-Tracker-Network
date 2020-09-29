@@ -21,6 +21,7 @@
 		CC0A22F42511821A000F74BD /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0A22F22511821A000F74BD /* ProfileViewController.xib */; };
 		CC0A22F72511855F000F74BD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A22F52511855F000F74BD /* AuthenticationViewController.swift */; };
 		CC0A22F82511855F000F74BD /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0A22F62511855F000F74BD /* AuthenticationViewController.xib */; };
+		CC1DBFB62522D9240062062F /* CommunityPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DBFB52522D9240062062F /* CommunityPost.swift */; };
 		CC5BABD9250D952F00BD1F12 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABD8250D952F00BD1F12 /* ServiceLayer.swift */; };
 		CC5BABDD250DA87700BD1F12 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABDC250DA87700BD1F12 /* Flight.swift */; };
 		CC5BABDF250DABBB00BD1F12 /* FlightJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */; };
@@ -96,6 +97,7 @@
 		CC0A22F22511821A000F74BD /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		CC0A22F52511855F000F74BD /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		CC0A22F62511855F000F74BD /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
+		CC1DBFB52522D9240062062F /* CommunityPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPost.swift; sourceTree = "<group>"; };
 		CC5BABD8250D952F00BD1F12 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		CC5BABDC250DA87700BD1F12 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightJSONResponse.swift; sourceTree = "<group>"; };
@@ -207,6 +209,31 @@
 				CC0A22F62511855F000F74BD /* AuthenticationViewController.xib */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CC1DBFB32522D8770062062F /* Flight API Models  */ = {
+			isa = PBXGroup;
+			children = (
+				CCCD55A82509617A004B20D0 /* FlightData.swift */,
+				CCCD55AA250961F0004B20D0 /* Departure.swift */,
+				CCCD55AC250963A7004B20D0 /* Arrival.swift */,
+				CCCD55AE25096424004B20D0 /* Airline.swift */,
+				CCCD55B02509676F004B20D0 /* Aircraft.swift */,
+				CCCD55B225096D11004B20D0 /* LiveLocation.swift */,
+				CC5BABDC250DA87700BD1F12 /* Flight.swift */,
+				CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */,
+				CC0A22E1250DC623000F74BD /* Pagination.swift */,
+				CC0A22E8250EC6C1000F74BD /* FlightAnnotation.swift */,
+			);
+			path = "Flight API Models ";
+			sourceTree = "<group>";
+		};
+		CC1DBFB42522D90C0062062F /* Firebase Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC1DBFB52522D9240062062F /* CommunityPost.swift */,
+			);
+			path = "Firebase Models";
 			sourceTree = "<group>";
 		};
 		CC959DDB2506CD12006DCB9C /* Search */ = {
@@ -323,16 +350,8 @@
 		CC9A3C0725059D1C0019C07F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CCCD55A82509617A004B20D0 /* FlightData.swift */,
-				CCCD55AA250961F0004B20D0 /* Departure.swift */,
-				CCCD55AC250963A7004B20D0 /* Arrival.swift */,
-				CCCD55AE25096424004B20D0 /* Airline.swift */,
-				CCCD55B02509676F004B20D0 /* Aircraft.swift */,
-				CCCD55B225096D11004B20D0 /* LiveLocation.swift */,
-				CC5BABDC250DA87700BD1F12 /* Flight.swift */,
-				CC5BABDE250DABBB00BD1F12 /* FlightJSONResponse.swift */,
-				CC0A22E1250DC623000F74BD /* Pagination.swift */,
-				CC0A22E8250EC6C1000F74BD /* FlightAnnotation.swift */,
+				CC1DBFB42522D90C0062062F /* Firebase Models */,
+				CC1DBFB32522D8770062062F /* Flight API Models  */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -754,6 +773,7 @@
 				CC0A22EB250F0D88000F74BD /* FlightAnnotationView.swift in Sources */,
 				CC9A3C0D2505BFA00019C07F /* RootTabBarController.swift in Sources */,
 				CCCD55A92509617A004B20D0 /* FlightData.swift in Sources */,
+				CC1DBFB62522D9240062062F /* CommunityPost.swift in Sources */,
 				CCCD55AF25096424004B20D0 /* Airline.swift in Sources */,
 				CC5BABDF250DABBB00BD1F12 /* FlightJSONResponse.swift in Sources */,
 				CC9A53D0251AEE4500E31F1E /* CreatePostViewController.swift in Sources */,

@@ -78,7 +78,7 @@ class CreatePostViewController: UIViewController {
                         "userPhotoURL": userPhotoURLString,
                         "postPhotoURL": postURLString,
                         "numberOfLikes": "0",
-                        "postLocation": self.postLocation
+                        "postLocation": self.postLocation,
                     ]
                     self.ref.child("posts").child(imageUUID).setValue(postDictionary)
                     self.postActivityIndicator.stopAnimating()

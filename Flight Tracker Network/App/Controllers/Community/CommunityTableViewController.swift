@@ -17,9 +17,9 @@ class CommunityTableViewController: UITableViewController {
     var handle: AuthStateDidChangeListenerHandle?
     var imagePicker: ImagePicker!
     private let firebaseStorage = Storage.storage().reference()
-    
     var ref = Database.database().reference()
-
+    var communityPosts = [CommunityPost]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.showsVerticalScrollIndicator = false
@@ -28,6 +28,7 @@ class CommunityTableViewController: UITableViewController {
                 nibName: "CommunityPostTableViewCell",
                 bundle: Bundle.main),
             forCellReuseIdentifier: "communityPostCell")
+        fetchCommunityPosts()
         newPostButton.target = self
         newPostButton.action = #selector(didPressNewPost)
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
@@ -51,6 +52,20 @@ class CommunityTableViewController: UITableViewController {
         self.imagePicker.present(from: sender)
     }
     
+    func fetchCommunityPosts() {
+        print("AUTH STATUS \(Auth.auth())")
+        ref.child("posts").observeSingleEvent(of: .value) { (snapshot) in
+            let postsResult = snapshot.value as? NSDictionary
+            for (_,postContent) in postsResult! {
+                let postContent = postContent as! NSDictionary
+                let post = CommunityPost(numberOfLikes: postContent["numberOfLikes"] as? Int ?? 0, postLocation: postContent["postLocation"] as? String, postPhotoURL: postContent["postPhotoURL"] as! String, userID: postContent["userID"] as! String, userPhotoURL: postContent["userPhotoURL"] as? String, username: postContent["username"] as! String)
+                self.communityPosts.append(post)
+            }
+            self.tableView.reloadData()
+        } withCancel: { (error) in
+            print(error.localizedDescription)
+        }
+    }
     //MARK: - Navigation
     
     func presentImagePostViewController(title: String, with image: UIImage) {
@@ -62,16 +77,19 @@ class CommunityTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return communityPosts.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "communityPostCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "communityPostCell", for: indexPath) as? CommunityPostTableViewCell ?? CommunityPostTableViewCell()
+        cell.usernameLabel.text = communityPosts[indexPath.row].username
+        cell.locationNameLabel.text = communityPosts[indexPath.row].postLocation
+        
         return cell
     }
     
